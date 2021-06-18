@@ -1,0 +1,15 @@
+@import 'browser-reset.scss';
+@import 'variables.scss';
+@import 'typography.scss';
+
+main#main-wrapper {
+  // Positioning
+  // Display and Box Model
+  align-items: center;
+  background-color: $dark-background;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  // Typography
+  // Other
+}

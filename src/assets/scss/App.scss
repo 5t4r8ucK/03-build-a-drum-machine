@@ -1,0 +1,152 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'typography.scss';
+
+section#drum-machine {
+  // Positioning
+  z-index: 1;
+  // Display and Box Model
+  background-color: $white-5;
+  border-radius: $machine-border-radius;
+  box-shadow: 0 1.25rem 0 $black-80;
+  display: grid;
+  gap: $gap-width;
+  grid-template-areas:
+  "name"
+  "controls"
+  "pad-bank";
+  grid-template-rows:
+    [name] auto,
+    [controls] auto,
+    [pad-bank] 1fr;
+  height: auto;
+  padding: $gap-width;
+  width: 25rem;
+  // Typography
+  // Other
+
+  #name {
+    // Positioning
+    // Display and Box Model
+    align-items: center;
+    display: flex;
+    grid-area: name;
+    justify-content: center;
+    // Typography
+    color: white;
+    font-family: $font-stack-futuristic;
+    // Other
+  }
+
+  #controls {
+    // Positioning
+    // Display and Box Model
+    grid-area: controls;
+    // Typography
+    // Other
+
+    #display {
+      // Positioning
+      // Display and Box Model
+      background-color: #BBBFB0;
+      border-style: solid;
+      border-color: $black-80;
+      border-radius: $button-border-radius;
+      border-width: $border-width;
+      box-shadow: 0 -0.375rem 0 $black-80;
+      min-height: 5rem;
+      // Typography
+      // Other
+    }
+
+    #power {
+
+    }
+
+    #volume {
+
+    }
+
+  }
+
+  #pad-bank {
+    // Positioning
+    // Display and Box Model
+    display: grid;
+    gap: $gap-width;
+    grid-area: pad-bank;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    grid-template-rows: auto;
+    height: auto;
+    // Typography
+    // Other
+
+    .drum-pad {
+      // Positioning
+      position: relative;
+      // Display and Box Model
+      align-items: center;
+      border-style: solid;
+      border-radius: $button-border-radius;
+      border-width: calc(#{$border-width} * 2);
+      display: flex;
+      justify-content: center;
+      height: 5rem;
+      // Typography
+      color: $black-100;
+      font-family: $font-stack-futuristic;
+      font-weight: 900;
+      // Other
+      cursor: pointer;
+
+      &:before {
+        // Positioning
+        background-color: $black-80;
+        bottom: -9px;
+        content: "";
+        left: -3px;
+        position: absolute;
+        top: 0px;
+        right: -3px;
+        z-index: -1;
+        // Display and Box Model
+        border-style: solid;
+        border-color: $black-80;
+        border-radius: 0.375rem;
+        border-width: $border-width;
+        // Typography
+        // Other
+      }
+
+      &:active {
+        // Positioning
+        position: relative;
+        top: 6px;
+        // Display and Box Model
+        // Typography
+        // Other
+
+        &:before {
+          // Positioning
+          bottom: -3px;
+          left: -3px;
+          right: -3px;
+          top: -3px;
+          // Display and Box Model
+          // Typography
+          // Other
+        }
+      }
+
+      @include drum-pad-color("red");
+      @include drum-pad-color("orange");
+      @include drum-pad-color("yellow");
+      @include drum-pad-color("cyan");
+      @include drum-pad-color("blue");
+      @include drum-pad-color("green");
+      @include drum-pad-color("purple");
+      @include drum-pad-color("magenta");
+      @include drum-pad-color("mauve");
+    }
+  }
+}

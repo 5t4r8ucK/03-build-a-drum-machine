@@ -1,0 +1,26 @@
+@use "sass:map";
+
+@mixin drum-pad-color($color) {
+  &.#{$color} {
+    // Positioning
+    // Display and Box Model
+    background: map.get($radial-gradients, $color);
+    border-top-color: map.get($highlights, $color);
+    border-bottom-color: map.get($darks, $color);
+    border-right-color: map.get($darks, $color);
+    border-left-color: map.get($highlights, $color);
+    box-shadow:
+      0 0.375rem 0 map.get($shadows, $color), // button raised
+      0.375rem 0.75rem 0 $black-20; // cast shadow
+    // Typography
+    // Other
+
+    &:active {
+      // Positioning
+      // Display and Box Model
+      box-shadow: none;
+      // Typography
+      // Other
+    }
+  }
+}

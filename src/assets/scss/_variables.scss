@@ -1,0 +1,80 @@
+@use "sass:map";
+
+// Colors
+$black-0: rgba(0 ,0 ,0, 0);
+$black-20: rgba(0 ,0 ,0, 0.2);
+$black-80: rgba(0 ,0 ,0, 0.8);
+$black-100: rgba(0 ,0 ,0, 1);
+
+$white-0: rgba(255, 255, 255, 0);
+$white-5: rgba(255, 255, 255, 0.05);
+$white-100: rgba(255, 255, 255, 1);
+
+$hues: (
+  "blue": #009FE3,
+  "cyan": #00A19B,
+  "green": #9EE003,
+  "magenta": #E81C73,
+  "mauve": #85519C,
+  "orange": #FF3E00,
+  "purple": #6C005D,
+  "red": #E40011,
+  "yellow": #FDEA11,
+);
+
+$darks: (
+  "blue": #0084BC,
+  "cyan": #007A76,
+  "green": #82B900,
+  "magenta": #C10052,
+  "mauve": #5E2B75,
+  "orange": #C33000,
+  "purple": #46003C,
+  "red": #97000B,
+  "yellow": #D6C500,
+);
+
+$highlights: (
+  "blue": #4CC9FF,
+  "cyan": #1DC7C0,
+  "green": #BFFF29,
+  "magenta": #FF4594,
+  "mauve": #DBBDE8,
+  "orange": #FF8D69,
+  "purple": #B836A5,
+  "red": #FF6974,
+  "yellow": #FFF483,
+);
+
+$shadows: (
+  "blue": #006995,
+  "cyan": #005351,
+  "green": #679200,
+  "magenta": #9A0041,
+  "mauve": #3B114E,
+  "orange": #9C2600,
+  "purple": #1F001B,
+  "red": #700008,
+  "yellow": #AFA100,
+);
+
+$radial-gradients: (
+  "blue": radial-gradient(map.get($highlights, "blue"), map.get($hues, "blue")),
+  "cyan": radial-gradient(map.get($highlights, "cyan"), map.get($hues, "cyan")),
+  "green": radial-gradient(map.get($highlights, "green"), map.get($hues, "green")),
+  "magenta": radial-gradient(map.get($highlights, "magenta"), map.get($hues, "magenta")),
+  "mauve": radial-gradient(map.get($highlights, "mauve"), map.get($hues, "mauve")),
+  "orange": radial-gradient(map.get($highlights, "orange"), map.get($hues, "orange")),
+  "purple": radial-gradient(map.get($highlights, "purple"), map.get($hues, "purple")),
+  "red": radial-gradient(map.get($highlights, "red"), map.get($hues, "red")),
+  "yellow": radial-gradient(map.get($highlights, "yellow"), map.get($hues, "yellow")),
+);
+
+$dark-background: #101519;
+
+// Measurements
+$gap-width: 1.75rem; // 28 px
+$border-width: 0.0625rem;// 1 px
+$button-border-radius: 0.3125rem; // 5 px
+$machine-border-radius: 0.625rem;//10 px
+$column-width: 7.375rem; // 118 px
