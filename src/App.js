@@ -1,24 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/css/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section id='drum-machine'>
+      <div id="name">
+        LinnDrum
+      </div>
+      <div id="controls">
+        <div id='display'></div>
+        <div id='power'></div>
+        <div id='volume'></div>
+      </div>
+      <div id='pad-bank'>
+        <div
+          id='bass-drum'
+          className='drum-pad red'>
+          Q
+        </div>
+        <div
+          id='snare'
+          className='drum-pad orange'>
+          W
+        </div>
+        <div
+          id='hi-hat'
+          className='drum-pad yellow'>
+          E
+        </div>
+        <div
+          id='crash-cymbal'
+          className='drum-pad blue'>
+          A
+        </div>
+        <div
+          id='tom-tom-1'
+          className='drum-pad cyan'>
+          S
+        </div>
+        <div
+          id='claps'
+          className='drum-pad green'>
+          D
+        </div>
+        <div
+          id='tambourine'
+          className='drum-pad purple'>
+          Z
+        </div>
+        <div
+          id='high-conga'
+          className='drum-pad magenta'>
+          X
+        </div>
+        <div
+          id='cowbell'
+          className='drum-pad mauve'>
+          C
+        </div>
+      </div>
+    </section>
   );
 }
 
