@@ -11,14 +11,25 @@
     border-left-color: map.get($highlights, $color);
     box-shadow:
       0 0.375rem 0 map.get($shadows, $color), // button raised
-      0.375rem 0.75rem 0 $black-20; // cast shadow
-    // Typography
-    // Other
-
-    &:active {
+      calc(#{$gap-width} / 4) calc(#{$gap-width} / 2) 0 $black-40; // cast shadow
+    &:active:focus {
       // Positioning
       // Display and Box Model
-      box-shadow: none;
+      box-shadow: none; // button depressed
+      // Typography
+      // Other
+    }
+
+    &:focus {
+      // Positioning
+      // Display and Box Model
+      background: map.get($lit-up-button, $color);
+      border-bottom-color: map.get($hues, $color);
+      border-right-color: map.get($hues, $color);
+      box-shadow:
+        0 0.375rem 0.125rem map.get($highlights , $color), // button glow
+        0 0.375rem 0 map.get($shadows, $color), // button raised
+        calc(#{$gap-width} / 4) calc(#{$gap-width} / 2) 0 $black-40; // cast shadow
       // Typography
       // Other
     }
