@@ -12,6 +12,13 @@
     box-shadow:
       0 0.375rem 0 map.get($shadows, $color), // button raised
       calc(#{$gap-width} / 4) calc(#{$gap-width} / 2) 0 $black-40; // cast shadow
+    // Typography
+    color: map.get($darks, $color);
+    text-shadow:
+      0px calc(#{$hairline-width} * (-1)) 0px map.get($shadows, $color), // shadow
+      0px $hairline-width 0px $white-40; // highlight
+    // Other
+
     &:active:focus {
       // Positioning
       // Display and Box Model
