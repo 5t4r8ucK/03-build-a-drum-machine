@@ -143,9 +143,8 @@
       border-width: calc(#{$border-width} * 2);
       display: flex;
       justify-content: center;
-      height: 5rem;
+      height: $column-width;
       // Typography
-      color: $black-100;
       font-family: $font-stack-futuristic;
       font-weight: 900;
       // Other
