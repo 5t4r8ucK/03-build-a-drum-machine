@@ -140,7 +140,7 @@
       align-items: center;
       border-style: solid;
       border-radius: $button-border-radius;
-      border-width: calc(#{$border-width} * 2);
+      border-width: $border-width;
       display: flex;
       justify-content: center;
       height: $column-width;
