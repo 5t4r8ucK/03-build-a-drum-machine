@@ -40,8 +40,12 @@
     grid-area: name;
     justify-content: center;
     // Typography
-    color: white;
+    color: $white-100;
     font-family: $font-stack-futuristic;
+    font-weight: 900;
+    text-shadow:
+      0px calc(#{$hairline-width} * (-1)) 0px $black-100, // shadow
+      0px $hairline-width 0px $white-40; // highlight
     // Other
   }
 
