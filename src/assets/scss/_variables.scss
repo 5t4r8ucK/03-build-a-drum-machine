@@ -2,13 +2,26 @@
 
 // Colors
 $black-0: rgba(0 ,0 ,0, 0);
+$black-1: rgba(0 ,0 ,0, 0.01);
+$black-3: rgba(0 ,0 ,0, 0.03);
+$black-10: rgba(0 ,0 ,0, 0.1);
 $black-20: rgba(0 ,0 ,0, 0.2);
+$black-40: rgba(0 ,0 ,0, 0.4);
+$black-50: rgba(0 ,0 ,0, 0.5);
 $black-80: rgba(0 ,0 ,0, 0.8);
 $black-100: rgba(0 ,0 ,0, 1);
 
 $white-0: rgba(255, 255, 255, 0);
+$white-2: rgba(255, 255, 255, 0.02);
 $white-5: rgba(255, 255, 255, 0.05);
+$white-10: rgba(255, 255, 255, 0.1);
+$white-20: rgba(255, 255, 255, 0.2);
+$white-40: rgba(255, 255, 255, 0.4);
+$white-50: rgba(255, 255, 255, 0.5);
 $white-100: rgba(255, 255, 255, 1);
+
+$dark-background: #101519;
+$lcd-color: #BAC1AF;
 
 $hues: (
   "blue": rgba(0, 159, 227, 1),
