@@ -1,4 +1,7 @@
 import './assets/css/App.css';
+// Data
+import pads from './assets/data/pads.js';
+
 
 function App() {
   return (
