@@ -20,6 +20,11 @@
   width: 25rem;
   // Typography
   // Other
+  background-image:
+    repeating-linear-gradient($black-20 0%, $black-0 3%, $black-10 6.1%),
+    repeating-linear-gradient($black-0 1%, $black-0 4.5%, $black-3 5.3%),
+    repeating-linear-gradient($black-0 0%, $black-0 1.2%, $black-20 2.2%),
+    linear-gradient($black-50  0%, $black-20 47%, $black-50 53%, rgb(0, 0, 0, 0.7) 100%);
 
   #name {
     // Positioning
