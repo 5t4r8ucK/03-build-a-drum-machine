@@ -1,3 +1,6 @@
+// React
+import React, {useState} from 'react';
+// CSS
 import './assets/css/App.css';
 // Data
 import pads from './assets/data/pads.js';
