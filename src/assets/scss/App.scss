@@ -12,13 +12,9 @@
   display: grid;
   gap: $gap-width;
   grid-template-areas:
-  "name"
-  "controls"
-  "pad-bank";
-  grid-template-rows:
-    [name] auto,
-    [controls] auto,
-    [pad-bank] 1fr;
+    'name'
+    'controls'
+    'pad-bank';
   height: auto;
   padding: $gap-width;
   width: 25rem;
@@ -138,15 +134,15 @@
         }
       }
 
-      @include drum-pad-color("red");
-      @include drum-pad-color("orange");
-      @include drum-pad-color("yellow");
-      @include drum-pad-color("cyan");
-      @include drum-pad-color("blue");
-      @include drum-pad-color("green");
-      @include drum-pad-color("purple");
-      @include drum-pad-color("magenta");
-      @include drum-pad-color("mauve");
+      @include drum-pad-color('red');
+      @include drum-pad-color('orange');
+      @include drum-pad-color('yellow');
+      @include drum-pad-color('cyan');
+      @include drum-pad-color('blue');
+      @include drum-pad-color('green');
+      @include drum-pad-color('purple');
+      @include drum-pad-color('magenta');
+      @include drum-pad-color('mauve');
     }
   }
 }
