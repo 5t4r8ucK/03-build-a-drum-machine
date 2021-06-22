@@ -17,7 +17,7 @@
     'pad-bank';
   height: auto;
   padding: $gap-width;
-  width: 25rem;
+  width: calc((#{$column-width} * 3) + (#{$gap-width} * 5));
   // Typography
   // Other
   background-image:
@@ -76,7 +76,7 @@
     display: grid;
     gap: $gap-width;
     grid-area: pad-bank;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax($column-width, 1fr));
     grid-template-rows: auto;
     height: auto;
     // Typography
