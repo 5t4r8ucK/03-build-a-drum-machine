@@ -5,65 +5,81 @@ import './assets/css/App.css';
 // Data
 import pads from './assets/data/pads.js';
 
-
-function App() {
+const PadBank = ({pads, playAudio, setText}) => {
+  const HandleMouseClick = (letter, instrument) => {
+    setText(instrument);
+    playAudio(letter);
+  }
+  const padButtons = pads.map((pad) => {
+    return (
+      <li
+        key={pad.id}
+        id={pad.id}
+        className={`drum-pad ${pad.color}`}
+        onClick={() => HandleMouseClick(pad.letter, pad.id)}
+        tabIndex={pad.padIndex}
+      >
+        {pad.letter}
+        <audio
+          id={pad.letter}
+          src={pad.sound}
+          className='clip'
+          type='audio/wav'
+        >
+          <p>Your browser does not support the audio element.</p>
+        </audio>
+      </li>
+    )
+  });
   return (
-    <section id='drum-machine'>
+    <ul id='pad-bank'>
+      {padButtons}
+    </ul>
+  );
+}
+
+const Display = ({text}) => {
+  return (
+    <div id='display'>{text}</div>
+  )
+}
+
+const App = () => {
+  // Display State
+  const initialState = "Welcome...";
+  const [text, setText] = useState(initialState);
+
+  const playAudio = (letter) => {
+    const audio = document.getElementById(letter);
+    audio.play();
+  };
+
+  const handleKeyPress = (event) => {
+    const keyPressed = event.key.toUpperCase();
+    pads.forEach(pad => {
+      if (pad.letter === keyPressed) { // play only on assigned keys
+        setText(pad.id);
+        playAudio(keyPressed);
+      }
+    });
+  }
+
+  return (
+    <section
+      id='drum-machine'
+      tabIndex="0"
+      autoFocus
+      onKeyDown={(event) => handleKeyPress(event)}
+    >
       <div id="name">
         LinnDrum
       </div>
       <div id="controls">
-        <div id='display'></div>
+        <Display text={text} />
         <div id='power'></div>
         <div id='volume'></div>
       </div>
-      <div id='pad-bank'>
-        <div
-          id='bass-drum'
-          className='drum-pad red'>
-          Q
-        </div>
-        <div
-          id='snare'
-          className='drum-pad orange'>
-          W
-        </div>
-        <div
-          id='hi-hat'
-          className='drum-pad yellow'>
-          E
-        </div>
-        <div
-          id='crash-cymbal'
-          className='drum-pad blue'>
-          A
-        </div>
-        <div
-          id='tom-tom-1'
-          className='drum-pad cyan'>
-          S
-        </div>
-        <div
-          id='claps'
-          className='drum-pad green'>
-          D
-        </div>
-        <div
-          id='tambourine'
-          className='drum-pad purple'>
-          Z
-        </div>
-        <div
-          id='high-conga'
-          className='drum-pad magenta'>
-          X
-        </div>
-        <div
-          id='cowbell'
-          className='drum-pad mauve'>
-          C
-        </div>
-      </div>
+      <PadBank pads={pads} playAudio={playAudio} setText={setText}/>
     </section>
   );
 }
