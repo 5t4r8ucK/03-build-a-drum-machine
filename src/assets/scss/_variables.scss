@@ -11,39 +11,51 @@ $white-5: rgba(255, 255, 255, 0.05);
 $white-100: rgba(255, 255, 255, 1);
 
 $hues: (
-  "blue": #009FE3,
-  "cyan": #00A19B,
-  "green": #9EE003,
-  "magenta": #E81C73,
-  "mauve": #85519C,
-  "orange": #FF3E00,
-  "purple": #6C005D,
-  "red": #E40011,
-  "yellow": #FDEA11,
+  "blue": rgba(0, 159, 227, 1),
+  "cyan": rgba(0, 161, 155, 1),
+  "green": rgba(158, 224, 3, 1),
+  "magenta": rgba(232, 28, 115, 1),
+  "mauve": rgba(133, 81, 156, 1),
+  "orange": rgba(255, 62, 0, 1),
+  "purple": rgba(108, 0, 93, 1),
+  "red": rgba(228, 0, 17, 1),
+  "yellow": rgba(253, 234, 17, 1),
 );
 
 $darks: (
-  "blue": #0084BC,
-  "cyan": #007A76,
-  "green": #82B900,
-  "magenta": #C10052,
-  "mauve": #5E2B75,
-  "orange": #C33000,
-  "purple": #46003C,
-  "red": #97000B,
-  "yellow": #D6C500,
+  "blue": rgba(0, 132, 188, 1),
+  "cyan": rgba(0, 122, 118, 1),
+  "green": rgba(130, 185, 0, 1),
+  "magenta": rgba(193, 0, 82, 1),
+  "mauve": rgba(125, 57, 156, 1),
+  "orange": rgba(195, 48, 0, 1),
+  "purple": rgba(70, 0, 60, 1),
+  "red": rgba(151, 0, 11, 1),
+  "yellow": rgba(214, 197, 0, 1),
 );
 
 $highlights: (
-  "blue": #4CC9FF,
-  "cyan": #1DC7C0,
-  "green": #BFFF29,
-  "magenta": #FF4594,
-  "mauve": #DBBDE8,
-  "orange": #FF8D69,
-  "purple": #B836A5,
-  "red": #FF6974,
-  "yellow": #FFF483,
+  "blue": rgb(76,201,255, 1),
+  "cyan": rgba(29,199,192, 1),
+  "green": rgba(191, 255, 41, 1),
+  "magenta": rgba(255, 69, 148, 1),
+  "mauve": rgba(219, 189, 232, 1),
+  "orange": rgba(255, 141, 105, 1),
+  "purple": rgba(184, 54, 165, 1),
+  "red": rgba(255, 105, 116, 1),
+  "yellow": rgba(255, 244, 131, 1),
+);
+
+$highlights-40: (
+  "blue": rgb(76, 201, 255, 0.4),
+  "cyan": rgba(29, 199, 192, 0.4),
+  "green": rgba(191, 255, 41, 0.4),
+  "magenta": rgba(255, 69, 148, 0.4),
+  "mauve": rgba(219, 189, 232, 0.4),
+  "orange": rgba(255, 141, 105, 0.4),
+  "purple": rgba(184, 54, 165, 0.4),
+  "red": rgba(255, 105, 116, 0.4),
+  "yellow": rgba(255, 244, 131, 0.4),
 );
 
 $shadows: (
