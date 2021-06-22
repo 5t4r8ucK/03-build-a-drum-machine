@@ -4,7 +4,7 @@
   &.#{$color} {
     // Positioning
     // Display and Box Model
-    background: map.get($radial-gradients, $color);
+    background: map.get($normal-button, $color);
     border-top-color: map.get($highlights, $color);
     border-bottom-color: map.get($darks, $color);
     border-right-color: map.get($darks, $color);

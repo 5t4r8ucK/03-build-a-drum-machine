@@ -70,19 +70,92 @@ $shadows: (
   "yellow": #AFA100,
 );
 
-$radial-gradients: (
-  "blue": radial-gradient(map.get($highlights, "blue"), map.get($hues, "blue")),
-  "cyan": radial-gradient(map.get($highlights, "cyan"), map.get($hues, "cyan")),
-  "green": radial-gradient(map.get($highlights, "green"), map.get($hues, "green")),
-  "magenta": radial-gradient(map.get($highlights, "magenta"), map.get($hues, "magenta")),
-  "mauve": radial-gradient(map.get($highlights, "mauve"), map.get($hues, "mauve")),
-  "orange": radial-gradient(map.get($highlights, "orange"), map.get($hues, "orange")),
-  "purple": radial-gradient(map.get($highlights, "purple"), map.get($hues, "purple")),
-  "red": radial-gradient(map.get($highlights, "red"), map.get($hues, "red")),
-  "yellow": radial-gradient(map.get($highlights, "yellow"), map.get($hues, "yellow")),
+$normal-button: (
+  "blue":
+    (
+    linear-gradient(135deg, map.get($hues, "blue"), map.get($highlights, "blue")),
+    ),
+  "cyan":
+    (
+    linear-gradient(135deg, map.get($hues, "cyan"), map.get($highlights, "cyan")),
+    ),
+  "green":
+    (
+    linear-gradient(135deg, map.get($hues, "green"), map.get($highlights, "green")),
+    ),
+  "magenta":
+    (
+    linear-gradient(135deg, map.get($hues, "magenta"), map.get($highlights, "magenta")),
+    ),
+  "mauve":
+    (
+    linear-gradient(135deg, map.get($hues, "mauve"), map.get($highlights, "mauve")),
+    ),
+  "orange":
+    (
+    linear-gradient(135deg, map.get($hues, "orange"), map.get($highlights, "orange")),
+    ),
+  "purple":
+    (
+    linear-gradient(135deg, map.get($hues, "purple"), map.get($highlights, "purple")),
+    ),
+  "red":
+    (
+    linear-gradient(135deg, map.get($hues, "red"), map.get($highlights, "red")),
+    ),
+  "yellow":
+    (
+    linear-gradient(135deg, map.get($hues, "yellow"), map.get($highlights, "yellow")),
+    ),
 );
 
-$dark-background: #101519;
+$lit-up-button: (
+  "blue":
+    (
+    linear-gradient(135deg, map.get($hues, "blue"), map.get($highlights-40, "blue")),
+    radial-gradient($white-100, map.get($highlights, "blue"), map.get($hues, "blue"), map.get($darks, "blue"))
+    ),
+  "cyan":
+    (
+    linear-gradient(135deg, map.get($hues, "cyan"), map.get($highlights-40, "cyan")),
+    radial-gradient($white-100 10%, map.get($highlights, "cyan"), map.get($hues, "cyan"), map.get($darks, "cyan"))
+    ),
+  "green":
+    (
+    linear-gradient(135deg, map.get($hues, "green"), map.get($highlights-40, "green")),
+    radial-gradient($white-100 10%, map.get($highlights, "green"), map.get($hues, "green"), map.get($darks, "green"))
+    ),
+  "magenta":
+    (
+    linear-gradient(135deg, map.get($hues, "magenta"), map.get($highlights-40, "magenta")),
+    radial-gradient($white-100 10%, map.get($highlights, "magenta"), map.get($hues, "magenta"), map.get($darks, "magenta"))
+    ),
+  "mauve":
+    (
+    linear-gradient(135deg, map.get($hues, "mauve"), map.get($highlights-40, "mauve")),
+    radial-gradient($white-100 10%, map.get($highlights, "mauve"), map.get($hues, "mauve"), map.get($darks, "mauve"))
+    ),
+  "orange":
+    (
+    linear-gradient(135deg, map.get($hues, "orange"), map.get($highlights-40, "orange")),
+    radial-gradient($white-100 10%, map.get($highlights, "orange"), map.get($hues, "orange"), map.get($darks, "orange"))
+    ),
+  "purple":
+    (
+    linear-gradient(135deg, map.get($hues, "purple"), map.get($highlights-40, "purple")),
+    radial-gradient($white-100 10%, map.get($highlights, "purple"), map.get($hues, "purple"), map.get($darks, "purple"))
+    ),
+  "red":
+    (
+    linear-gradient(135deg, map.get($hues, "red"), map.get($highlights-40, "red")),
+    radial-gradient($white-100 10%, map.get($highlights, "red"), map.get($hues, "red"), map.get($darks, "red"))
+    ),
+  "yellow":
+    (
+    linear-gradient(135deg, map.get($hues, "yellow"), map.get($highlights-40, "yellow")),
+    radial-gradient($white-100 10%, map.get($highlights, "yellow"), map.get($hues, "yellow"), map.get($darks, "yellow"))
+    ),
+);
 
 // Measurements
 $gap-width: 1.75rem; // 28 px
