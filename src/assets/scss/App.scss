@@ -6,8 +6,14 @@
   // Positioning
   z-index: 1;
   // Display and Box Model
-  background-color: $white-5;
+  background-color: $white-2;
   border-radius: $machine-border-radius;
+  border-top-color: $white-10;
+  border-left-color: $white-10;
+  border-bottom-color: $black-20;
+  border-right-color: $black-20;
+  border-style: solid;
+  border-width: $border-width;
   box-shadow: 0 1.25rem 0 $black-80;
   display: grid;
   gap: $gap-width;
