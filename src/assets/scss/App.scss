@@ -170,24 +170,6 @@
         content: '';
       }
 
-      &:active {
-        // Positioning
-        position: relative;
-        top: 6px;
-        // Display and Box Model
-        // Typography
-        // Other
-
-        &:before {
-          // Positioning
-          bottom: -4px;
-          top: -4px;
-          // Display and Box Model
-          // Typography
-          // Other
-        }
-      }
-
       @include drum-pad-color('red');
       @include drum-pad-color('orange');
       @include drum-pad-color('yellow');
