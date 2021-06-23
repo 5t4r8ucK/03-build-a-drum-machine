@@ -5,18 +5,14 @@ import './assets/css/App.css';
 // Data
 import pads from './assets/data/pads.js';
 
-const PadBank = ({pads, playAudio, setText}) => {
-  const HandleMouseClick = (letter, instrument) => {
-    setText(instrument);
-    playAudio(letter);
-  }
+const PadBank = ({pads, playAudio, buttonState}) => {
   const padButtons = pads.map((pad) => {
     return (
       <li
-        key={pad.id}
         id={pad.id}
-        className={`drum-pad ${pad.color}`}
-        onClick={() => HandleMouseClick(pad.letter, pad.id)}
+        className={`drum-pad ${pad.color} ${buttonState[pad.id] ? 'active' : ''}`}
+        onClick={() => playAudio(pad)}
+        key={pad.id}
         tabIndex={pad.padIndex}
       >
         {pad.letter}
@@ -61,17 +57,31 @@ const App = () => {
     }
   );
 
-  const playAudio = (letter) => {
-    const audio = document.getElementById(letter);
+  const setActiveButton = (pad, active) => setButtonState({ ...buttonState, [pad.id]: active });
+
+  const playAudio = (pad) => {
+    setText(pad.id);
+    const audio = document.getElementById(pad.letter);
+    audio.currentTime = 0;
     audio.play();
   };
 
-  const handleKeyPress = (event) => {
+  const handleKeyDown = (event) => {
     const keyPressed = event.key.toUpperCase();
     pads.forEach(pad => {
       if (pad.letter === keyPressed) { // play only on assigned keys
-        setText(pad.id);
-        playAudio(keyPressed);
+        playAudio(pad);
+        setActiveButton(pad, true);
+        document.getElementById(pad.id).focus();
+      }
+    });
+  }
+
+  const handleKeyUp = (event) => {
+    const keyPressed = event.key.toUpperCase();
+    pads.forEach(pad => {
+      if (pad.letter === keyPressed) {
+        setActiveButton(pad, false);
       }
     });
   }
@@ -81,7 +91,8 @@ const App = () => {
       id='drum-machine'
       tabIndex="0"
       autoFocus
-      onKeyDown={(event) => handleKeyPress(event)}
+      onKeyDown={handleKeyDown}
+      onKeyUp={handleKeyUp}
     >
       <div id="name">
         LinnDrum
@@ -91,7 +102,11 @@ const App = () => {
         <div id='power'></div>
         <div id='volume'></div>
       </div>
-      <PadBank pads={pads} playAudio={playAudio} setText={setText}/>
+      <PadBank
+        pads={pads}
+        playAudio={playAudio}
+        buttonState={buttonState}
+      />
     </section>
   );
 }
