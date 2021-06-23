@@ -46,8 +46,20 @@ const Display = ({text}) => {
 
 const App = () => {
   // Display State
-  const initialState = "Welcome...";
-  const [text, setText] = useState(initialState);
+  const [text, setText] = useState('Welcome...');
+  const [buttonState, setButtonState] = useState(
+    {
+      'bass-drum': false,
+      'snare': false,
+      'hi-hat': false,
+      'crash-cymbal': false,
+      'tom-tom-1': false,
+      'clap-1': false,
+      'tambourine': false,
+      'high-conga': false,
+      'cowbell': false
+    }
+  );
 
   const playAudio = (letter) => {
     const audio = document.getElementById(letter);
