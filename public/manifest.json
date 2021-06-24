@@ -1,6 +1,6 @@
 {
   "short_name": "Drum Machine",
-  "name": "A Simple Drum Machine in React",
+  "name": "A Simple Drum Machine Built With React",
   "icons": [
     {
       "src": "/favicons/favicon.ico",
